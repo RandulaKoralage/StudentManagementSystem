@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="MarkSheet" language="groovy" pageWidth="595" pageHeight="842" whenNoDataType="AllSectionsNoDetail" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="ed71bf5c-9275-4eb1-a13d-f7a6c57aa545">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<parameter name="eName" class="java.lang.String"/>
+	<field name="St ID" class="java.lang.String"/>
+	<field name="Name" class="java.lang.String"/>
+	<field name="Theory Mark" class="java.lang.String"/>
+	<field name="Practical Mark" class="java.lang.String"/>
+	<field name="Total" class="java.lang.String"/>
+	<field name="Grade" class="java.lang.String"/>
+	<field name="Status" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="92" splitType="Stretch">
+			<staticText>
+				<reportElement x="93" y="19" width="349" height="65" forecolor="#000000" uuid="9e447243-4006-4040-b0dc-e03e58fc48f1"/>
+				<textElement textAlignment="Center">
+					<font size="36" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Result Sheet]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="35" splitType="Stretch">
+			<textField>
+				<reportElement x="20" y="8" width="367" height="20" uuid="1f286a47-293b-473c-b1d2-6a69e88b7430"/>
+				<textFieldExpression><![CDATA[$P{eName}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="39" splitType="Stretch">
+			<staticText>
+				<reportElement x="3" y="19" width="39" height="20" forecolor="#FF6666" uuid="e7bc9a90-d5fb-415b-b7f1-a4c4a98f9f33"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[St ID]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="78" y="19" width="100" height="20" forecolor="#FF6666" uuid="723807e2-60e7-40ce-999f-7625704d3622"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Name]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="201" y="19" width="67" height="20" forecolor="#FF6666" uuid="e1afc4a2-41da-4d07-b224-eef541d9a0d7"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Theory Mark]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="285" y="19" width="75" height="20" forecolor="#FF6666" uuid="b6d188c8-f515-428a-a443-eb3bd208d934"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Practical Mark]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="377" y="19" width="38" height="20" forecolor="#FF6666" uuid="db77cfe5-fb02-40df-a389-9c906d138bd2"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Total]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="445" y="19" width="39" height="20" forecolor="#FF6666" uuid="a840aec5-236b-4d73-9fab-7da56b169188"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Grade]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="497" y="19" width="58" height="20" forecolor="#FF6666" uuid="b5360149-760f-4a17-84b6-0c96be27e55a"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Status]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="37" splitType="Stretch">
+			<textField>
+				<reportElement x="3" y="11" width="69" height="20" uuid="015c1f3a-692a-43ea-bcdd-4e3bc7b2e662"/>
+				<textFieldExpression><![CDATA[$F{St ID}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="78" y="11" width="112" height="20" uuid="3109f51c-1092-4a8f-bcf7-17d26d362c71"/>
+				<textFieldExpression><![CDATA[$F{Name}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="201" y="11" width="67" height="20" uuid="8358a0a2-a501-4d1e-bb35-13151710f43e"/>
+				<textFieldExpression><![CDATA[$F{Theory Mark}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="285" y="11" width="75" height="20" uuid="f9d7dd30-a79f-4271-9a33-aa8f287d0f6e"/>
+				<textFieldExpression><![CDATA[$F{Practical Mark}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="377" y="11" width="55" height="20" uuid="2f8a52e9-5128-492e-a158-a938c7d4019d"/>
+				<textFieldExpression><![CDATA[$F{Total}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="445" y="11" width="39" height="20" uuid="5a4cdd65-a9aa-4254-91e3-2916d19cb73f"/>
+				<textFieldExpression><![CDATA[$F{Grade}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="497" y="11" width="58" height="20" uuid="65b94e51-ca23-4858-b347-0c7ef09deb46"/>
+				<textFieldExpression><![CDATA[$F{Status}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>

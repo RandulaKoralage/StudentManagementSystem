@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Timetable1" language="groovy" pageWidth="595" pageHeight="842" whenNoDataType="AllSectionsNoDetail" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="650ee3ef-b0b8-47f4-89cb-50a9c1a13d48">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<parameter name="cName" class="java.lang.String"/>
+	<parameter name="year" class="java.lang.String"/>
+	<field name="Day" class="java.lang.String"/>
+	<field name="Start Time" class="java.lang.String"/>
+	<field name="End Time" class="java.lang.String"/>
+	<field name="Lecturer Name" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="66" splitType="Stretch">
+			<textField>
+				<reportElement x="42" y="15" width="272" height="31" uuid="3eea55c3-2be2-4891-abcb-079c84e525c5"/>
+				<textElement textAlignment="Center">
+					<font size="24"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{cName}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="333" y="15" width="142" height="31" uuid="9ae32e9b-7063-4d5d-bd66-3707b2c83204"/>
+				<textElement>
+					<font size="24"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{year}]]></textFieldExpression>
+			</textField>
+		</band>
+	</title>
+	<pageHeader>
+		<band splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="61" splitType="Stretch">
+			<staticText>
+				<reportElement x="18" y="31" width="100" height="20" forecolor="#FF9999" uuid="ba7bf1b2-be17-497a-bbc3-640cfba9cbcd"/>
+				<textElement>
+					<font fontName="Comic Sans MS" size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Day]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="145" y="31" width="100" height="20" forecolor="#FF9999" uuid="d76ae222-b95b-4ec0-83f4-58cfb4bb83be"/>
+				<textElement>
+					<font fontName="Comic Sans MS" size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Start Time]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="273" y="31" width="100" height="20" forecolor="#FF9999" uuid="303281e5-db3d-4aa8-9716-0e6c5e869ada"/>
+				<textElement>
+					<font fontName="Comic Sans MS" size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[End Time]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="397" y="31" width="100" height="20" forecolor="#FF9999" uuid="7eefaef1-a225-4681-b0e7-2e5e8d865d5b"/>
+				<textElement>
+					<font fontName="Comic Sans MS" size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Lecturer Name]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="47" splitType="Stretch">
+			<textField>
+				<reportElement x="18" y="16" width="127" height="20" backcolor="#FFCC00" uuid="82a3d480-aaba-4107-ba7b-e8fdff387ebf"/>
+				<textElement>
+					<font fontName="Comic Sans MS" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{Day}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="145" y="16" width="128" height="20" backcolor="#FFCC00" uuid="a82fdf84-02a5-40e0-89ac-7b7d34d51483"/>
+				<textElement>
+					<font fontName="Comic Sans MS" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{Start Time}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="273" y="16" width="124" height="20" backcolor="#FFCC00" uuid="cd110c67-c9df-4b9c-899a-9e726401f144"/>
+				<textElement>
+					<font fontName="Comic Sans MS" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{End Time}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="397" y="16" width="135" height="20" backcolor="#FFCC00" uuid="7a2fdfc3-f48f-46ff-a654-0e4b955338f8"/>
+				<textElement>
+					<font fontName="Comic Sans MS" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{Lecturer Name}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>

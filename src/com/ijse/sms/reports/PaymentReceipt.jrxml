@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="report name" language="groovy" pageWidth="842" pageHeight="595" orientation="Landscape" whenNoDataType="AllSectionsNoDetail" columnWidth="802" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="2f65f6dc-1848-420c-a362-59669cf5b04f">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="23"/>
+	<property name="ireport.y" value="178"/>
+	<parameter name="no" class="java.lang.String"/>
+	<parameter name="name" class="java.lang.String"/>
+	<parameter name="regId" class="java.lang.String"/>
+	<parameter name="address" class="java.lang.String"/>
+	<parameter name="cName" class="java.lang.String"/>
+	<parameter name="fee" class="java.lang.String"/>
+	<parameter name="date" class="java.lang.String"/>
+	<parameter name="course" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch">
+			<staticText>
+				<reportElement x="194" y="31" width="370" height="20" forecolor="#CC0000" uuid="06311493-9221-4050-a96c-424c7227abd8"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Tahoma" size="12"/>
+				</textElement>
+				<text><![CDATA[No:10,Mosque Road,China Garden,Galle]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="225" y="51" width="301" height="18" forecolor="#CC0000" uuid="44e154a9-6a3b-4cb6-b38c-015a6f05c66b"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<text><![CDATA[T.P. 091-2222731/091-3094926]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="119" y="11" width="549" height="20" forecolor="#CC0000" uuid="8269f114-273f-4b75-b19b-9f2ac63d251e"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Tahoma" size="13"/>
+				</textElement>
+				<text><![CDATA[Rural Education Development And Vocational Training Institute]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="35" splitType="Stretch">
+			<staticText>
+				<reportElement x="486" y="9" width="66" height="20" forecolor="#CC0000" uuid="cf65281e-0c62-41de-82d0-53f6a096feb5"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<text><![CDATA[Reciept No :]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="564" y="9" width="100" height="20" uuid="71bb9a75-2d36-4fcb-81cf-d09bbfb0dfab"/>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$P{no}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="232" splitType="Stretch">
+			<staticText>
+				<reportElement x="116" y="111" width="75" height="20" forecolor="#CC0000" uuid="7e986715-0d7e-41fe-84b6-e290633be8d6"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<text><![CDATA[Branch	]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="116" y="48" width="75" height="20" forecolor="#CC0000" uuid="d24abf7b-7347-4fc6-aecf-4a5ca662abca"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<text><![CDATA[ Address      ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="116" y="79" width="75" height="20" forecolor="#CC0000" uuid="7396cfd0-6d7b-4915-9a42-75f531544719"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<text><![CDATA[Registration Id	]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="116" y="142" width="75" height="20" forecolor="#CC0000" uuid="aed315d8-9681-4f99-a886-33682bf4b873"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<text><![CDATA[Course	]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="117" y="16" width="75" height="20" forecolor="#CC0000" uuid="20e34842-d8f9-4c7b-9a9d-45311c3ebe45"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<text><![CDATA[Name	]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="116" y="173" width="75" height="20" forecolor="#CC0000" uuid="a52e173f-eb8f-48f1-9129-3a305f1603b2"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<text><![CDATA[Fee (Rs.)]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="223" y="16" width="375" height="20" uuid="8c23fa28-3df2-443a-8586-3c90c2d51584"/>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$P{name}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="223" y="79" width="375" height="20" uuid="e37077f5-5053-4a5d-9a1d-747d0604dc61"/>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$P{regId}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="223" y="48" width="548" height="20" uuid="de3647ed-21da-4c1c-832b-274d67f389eb"/>
+				<textFieldExpression><![CDATA[$P{address}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="223" y="111" width="100" height="20" uuid="407e9b01-f288-45b6-9a57-e4b42eeffdc9"/>
+				<textElement verticalAlignment="Middle"/>
+				<text><![CDATA[Galle]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="223" y="173" width="278" height="20" uuid="fae33b00-786b-43c2-83d5-b66a3be94c14"/>
+				<textFieldExpression><![CDATA[$P{fee}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="223" y="142" width="375" height="20" uuid="1f12e85b-4f94-4eb8-b144-a76370716ad1"/>
+				<textFieldExpression><![CDATA[$P{course}]]></textFieldExpression>
+			</textField>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="37" splitType="Stretch"/>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch">
+			<staticText>
+				<reportElement x="574" y="27" width="68" height="20" forecolor="#CC0000" uuid="c50029cf-d55b-4768-a3c5-506dfbff90dd"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<text><![CDATA[Treasurer]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="545" y="7" width="124" height="20" uuid="39d34c55-14a9-4ed4-8332-3aa9b275addd"/>
+				<textElement verticalAlignment="Bottom"/>
+				<text><![CDATA[..........................................]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="172" y="28" width="41" height="19" forecolor="#CC0000" uuid="d6c4bae1-8701-4807-8e78-b41877f17872"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<text><![CDATA[Date]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="123" y="7" width="148" height="19" uuid="7acfe79e-d79f-443b-83ff-4eedf71e7f62"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$P{date}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>

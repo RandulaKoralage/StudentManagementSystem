@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Certificate" language="groovy" pageWidth="595" pageHeight="842" whenNoDataType="AllSectionsNoDetail" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="ca5e7c5a-09b0-4715-8c19-1f245edab719">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="405"/>
+	<parameter name="id" class="java.lang.String"/>
+	<parameter name="name" class="java.lang.String"/>
+	<parameter name="first" class="java.lang.String"/>
+	<parameter name="last" class="java.lang.String"/>
+	<parameter name="course" class="java.lang.String"/>
+	<parameter name="issu" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="75" splitType="Stretch">
+			<staticText>
+				<reportElement x="48" y="4" width="455" height="62" uuid="b7647de2-3e63-4ddf-86e8-25dba4689728"/>
+				<textElement textAlignment="Center">
+					<font size="24"/>
+				</textElement>
+				<text><![CDATA[Rural Education Development & Vocational Training Institute]]></text>
+			</staticText>
+			<line>
+				<reportElement x="66" y="66" width="437" height="1" uuid="8ea5974e-0dbf-46e2-8a2f-fd45e516100c"/>
+			</line>
+		</band>
+	</title>
+	<pageHeader>
+		<band splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="596">
+			<staticText>
+				<reportElement x="88" y="55" width="341" height="31" uuid="7078df02-70dd-4454-9b1e-9a4e93c8af6a"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arno Pro Subhead" size="20"/>
+				</textElement>
+				<text><![CDATA[This is to certify that]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="88" y="205" width="341" height="31" uuid="e00338f2-0dd3-431b-b36c-156c24c07c9f"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arno Pro Subhead" size="20"/>
+				</textElement>
+				<text><![CDATA[has successfully completed the]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="98" y="361" width="341" height="31" uuid="9a0922dc-3ce2-4666-8fab-f3604130b449"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arno Pro Subhead" size="20"/>
+				</textElement>
+				<text><![CDATA[Nanapiyasa Computer Training Center]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="88" y="129" width="341" height="31" uuid="0a184429-e07e-4089-ba25-2d06508c3fbf"/>
+				<textElement textAlignment="Center">
+					<font size="20"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{name}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="77" y="288" width="384" height="31" uuid="b71ce2f5-91e2-474a-a20e-2dd1ff69e22e"/>
+				<textElement textAlignment="Center">
+					<font size="20"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{course}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="228" y="435" width="50" height="31" uuid="92457904-ffcd-4c89-9b97-37de953e15b5"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arno Pro Subhead" size="20"/>
+				</textElement>
+				<text><![CDATA[Galle]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="48" y="510" width="50" height="31" uuid="0c3374d4-ada3-4aef-a6fd-bd7522beee86"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arno Pro Subhead" size="20"/>
+				</textElement>
+				<text><![CDATA[From]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="261" y="510" width="33" height="31" uuid="6af89c8d-2338-4303-9251-ccf9e4ecc9d2"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arno Pro Subhead" size="20"/>
+				</textElement>
+				<text><![CDATA[To]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="307" y="510" width="158" height="31" uuid="9e53bd5f-7447-47f7-a9c5-964db354e8a5"/>
+				<textElement>
+					<font size="20"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{last}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="108" y="510" width="141" height="31" uuid="656b963c-bf4e-4213-98ff-0fe45202a188"/>
+				<textElement>
+					<font size="20"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{first}]]></textFieldExpression>
+			</textField>
+		</band>
+	</columnHeader>
+	<columnFooter>
+		<band height="60" splitType="Stretch">
+			<staticText>
+				<reportElement x="48" y="21" width="130" height="31" uuid="1dc2148b-0333-4eb0-99d1-ff1183aa9c6f"/>
+				<textElement textAlignment="Center">
+					<font fontName="Tahoma" size="12"/>
+				</textElement>
+				<text><![CDATA[Managing Director]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="364" y="21" width="139" height="31" uuid="eb56a07a-7886-447e-a59b-e2969a88891e"/>
+				<textElement textAlignment="Center">
+					<font fontName="Tahoma" size="12"/>
+				</textElement>
+				<text><![CDATA[Officer Incharge of the Course]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="35" y="1" width="158" height="20" uuid="33713f4c-0c44-4cad-bf05-e079d32b2d95"/>
+				<textElement verticalAlignment="Middle"/>
+				<text><![CDATA[......................................................]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="345" y="1" width="180" height="20" uuid="a37ba2c0-b545-46f0-b515-3fe0e937b75c"/>
+				<textElement verticalAlignment="Middle"/>
+				<text><![CDATA[.........................................................]]></text>
+			</staticText>
+		</band>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch">
+			<staticText>
+				<reportElement x="28" y="6" width="86" height="20" uuid="46fd1e72-487f-4896-9565-c0dc1624fc14"/>
+				<textElement>
+					<font fontName="Tahoma" size="12"/>
+				</textElement>
+				<text><![CDATA[Certificate No :]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="28" y="30" width="36" height="20" uuid="da77b87f-6a93-4977-bc11-8fa77e5f74d9"/>
+				<textElement>
+					<font fontName="Tahoma" size="12"/>
+				</textElement>
+				<text><![CDATA[Date :]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="129" y="6" width="198" height="20" uuid="6c1d9db4-ddfa-47a8-b4a1-44c95c67fa48"/>
+				<textFieldExpression><![CDATA[$P{id}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="129" y="28" width="198" height="20" uuid="133bd700-7b7c-478c-aa1d-acdeef3f384b"/>
+				<textFieldExpression><![CDATA[$P{issu}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+	<summary>
+		<band splitType="Stretch"/>
+	</summary>
+</jasperReport>

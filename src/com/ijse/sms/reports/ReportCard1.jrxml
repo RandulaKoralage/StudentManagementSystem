@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="ReportCard1" language="groovy" pageWidth="595" pageHeight="842" whenNoDataType="AllSectionsNoDetail" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="9cf970ca-d023-4ad5-8a0d-ddf8d22803e9">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<parameter name="name" class="java.lang.String"/>
+	<parameter name="cName" class="java.lang.String"/>
+	<parameter name="noOfDays" class="java.lang.String"/>
+	<parameter name="ab" class="java.lang.String"/>
+	<parameter name="pr" class="java.lang.String"/>
+	<parameter name="eName" class="java.lang.String"/>
+	<parameter name="pmV" class="java.lang.String"/>
+	<parameter name="tmV" class="java.lang.String"/>
+	<parameter name="grade" class="java.lang.String"/>
+	<parameter name="statusIs" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch">
+			<staticText>
+				<reportElement x="84" y="12" width="331" height="57" forecolor="#FF9966" uuid="7be9bee5-096a-46ba-b0ca-40e089a2eb0a"/>
+				<textElement textAlignment="Center">
+					<font size="36"/>
+				</textElement>
+				<text><![CDATA[Student Report]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="57" splitType="Stretch">
+			<textField pattern="EEEEE dd MMMMM yyyy">
+				<reportElement x="9" y="8" width="141" height="20" forecolor="#9900FF" uuid="53d0de8f-5861-41fc-81c6-07dfded80e99"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="260" y="8" width="277" height="20" forecolor="#9900FF" uuid="1cb914f6-eb23-4561-8935-c288255bb8f5"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{name}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="260" y="33" width="277" height="20" forecolor="#9900FF" uuid="05959dbc-9dc0-4f08-98cd-3086ddacdfa7"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{cName}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="317" splitType="Stretch">
+			<staticText>
+				<reportElement x="131" y="16" width="120" height="23" forecolor="#FF3366" uuid="76c9e8d7-def1-4658-b2e9-7eef52d4463b"/>
+				<textElement verticalAlignment="Middle">
+					<font size="16" isBold="true" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[Attendance Status]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="131" y="52" width="75" height="20" forecolor="#000000" uuid="5ead9aba-8948-474c-8b23-a152b121edf6"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Tahoma" size="14"/>
+				</textElement>
+				<text><![CDATA[Total Days]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="131" y="72" width="75" height="20" forecolor="#000000" uuid="0d6f025a-9de4-46e5-a9ae-2f66aca7b1e9"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Tahoma" size="14"/>
+				</textElement>
+				<text><![CDATA[Present]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="131" y="92" width="75" height="20" forecolor="#000000" uuid="b5ae1bdd-b7eb-4c90-a73e-f200430d7aba"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Tahoma" size="14"/>
+				</textElement>
+				<text><![CDATA[Absent]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="219" y="52" width="142" height="20" forecolor="#000000" uuid="174b8ec5-cab4-47c6-88f4-4ffe38ae7286"/>
+				<textElement>
+					<font fontName="Tahoma" size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{noOfDays}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="219" y="92" width="142" height="20" forecolor="#000000" uuid="df838483-263f-4f28-a3a1-4f939a28e666"/>
+				<textElement>
+					<font fontName="Tahoma" size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{ab}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="219" y="72" width="142" height="20" forecolor="#000000" uuid="369a59fa-0a03-4743-bf3b-c11f0fd627c3"/>
+				<textElement>
+					<font fontName="Tahoma" size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{pr}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="131" y="147" width="120" height="23" forecolor="#FF3366" uuid="0bd10bf5-1580-4971-99c9-af19ad4e5bcc"/>
+				<textElement verticalAlignment="Middle">
+					<font size="16" isBold="true" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[Examination Results]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="131" y="188" width="75" height="20" forecolor="#000000" uuid="467b33d4-5ae0-4b2c-9cd2-b070ae24e1d2"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Tahoma" size="14"/>
+				</textElement>
+				<text><![CDATA[Examination]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="219" y="188" width="255" height="20" forecolor="#000000" uuid="c0bcc039-f60d-4433-b41d-e10725051c26"/>
+				<textElement>
+					<font fontName="Tahoma" size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{eName}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="131" y="208" width="75" height="20" forecolor="#000000" uuid="cb483810-9343-4dac-8dc3-27a48522db43"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Tahoma" size="14"/>
+				</textElement>
+				<text><![CDATA[Practical Mark]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="131" y="228" width="75" height="20" forecolor="#000000" uuid="6789454a-ac2a-4d36-ab59-8b744477dee5"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Tahoma" size="14"/>
+				</textElement>
+				<text><![CDATA[Theory Mark]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="131" y="248" width="75" height="20" forecolor="#000000" uuid="b9282e75-c7a7-4819-a429-90bdf78e10c3"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Tahoma" size="14"/>
+				</textElement>
+				<text><![CDATA[Grade]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="131" y="268" width="75" height="20" forecolor="#000000" uuid="3bee1590-d8ab-480d-b63e-fc3e8c94b482"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Tahoma" size="14"/>
+				</textElement>
+				<text><![CDATA[Status]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="219" y="208" width="142" height="20" forecolor="#000000" uuid="aea3dd67-2c3a-4dbc-968a-1cdd3cfc6f4a"/>
+				<textElement>
+					<font fontName="Tahoma" size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{pmV}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="219" y="228" width="142" height="20" forecolor="#000000" uuid="f9adf0c8-26fd-4bd7-9a29-d3ad90df7196"/>
+				<textElement>
+					<font fontName="Tahoma" size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{tmV}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="219" y="248" width="142" height="20" forecolor="#000000" uuid="f9c4dd6c-709a-4bf2-bedb-49cbec7f6b42"/>
+				<textElement>
+					<font fontName="Tahoma" size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{grade}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="219" y="268" width="142" height="20" forecolor="#000000" uuid="67124e35-e81c-4fbc-84f5-37fc0068dda6"/>
+				<textElement>
+					<font fontName="Tahoma" size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{statusIs}]]></textFieldExpression>
+			</textField>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="33" splitType="Stretch"/>
+	</detail>
+	<columnFooter>
+		<band height="69" splitType="Stretch">
+			<staticText>
+				<reportElement x="6" y="25" width="120" height="20" uuid="f8e45753-b4e1-49d6-b0a5-087f5e53408b"/>
+				<textElement textAlignment="Center">
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[Course Cordinator]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="222" y="25" width="100" height="20" uuid="10d01ba8-572b-4e85-8645-6a358045dbf3"/>
+				<textElement textAlignment="Center">
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[Student]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="437" y="25" width="100" height="20" uuid="158480fa-1026-435a-aad9-64fb3cf9a546"/>
+				<textElement textAlignment="Center">
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[Parent]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="6" y="5" width="120" height="20" uuid="8b88cf6d-e5ca-4ce6-b97b-50aba4c71e4a"/>
+				<textElement verticalAlignment="Bottom"/>
+				<text><![CDATA[.....................................]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="216" y="5" width="120" height="20" uuid="c7b41559-977e-48e7-98fd-a7322b79cc2b"/>
+				<textElement verticalAlignment="Bottom"/>
+				<text><![CDATA[.....................................]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="430" y="5" width="120" height="20" uuid="791f97a3-6c6a-4f18-a759-71385acc48b3"/>
+				<textElement verticalAlignment="Bottom"/>
+				<text><![CDATA[.....................................]]></text>
+			</staticText>
+		</band>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>

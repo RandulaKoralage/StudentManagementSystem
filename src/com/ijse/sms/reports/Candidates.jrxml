@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Candidates" language="groovy" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="5fd0ea65-20e8-4e81-90d4-c929f76dc219">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<parameter name="eName" class="java.lang.String"/>
+	<parameter name="year" class="java.lang.String"/>
+	<field name="St Id" class="java.lang.String"/>
+	<field name="Reg Id" class="java.lang.String"/>
+	<field name="Name" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch">
+			<staticText>
+				<reportElement x="15" y="16" width="69" height="20" uuid="af95fef2-7285-475e-9923-b2377ee1a388"/>
+				<textElement verticalAlignment="Middle">
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[Exam Name]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="15" y="52" width="69" height="20" uuid="385c28bf-43de-4f64-9a35-eecd3c24714f"/>
+				<textElement verticalAlignment="Middle">
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[Exam Year]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="90" y="16" width="396" height="20" uuid="eaf4bada-ee81-4ecd-95ee-2a7c98c4f73c"/>
+				<textElement verticalAlignment="Middle">
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{eName}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="90" y="52" width="144" height="20" uuid="f54bbeef-94f4-422f-9510-51cc8c965eab"/>
+				<textElement verticalAlignment="Middle">
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{year}]]></textFieldExpression>
+			</textField>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="35" splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="61" splitType="Stretch">
+			<staticText>
+				<reportElement x="37" y="26" width="33" height="20" uuid="3d1c945c-38a9-4f08-89a6-faef9317167c"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[St Id]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="178" y="26" width="37" height="20" uuid="977a657e-5cf6-43ff-9948-74c6da208097"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[Reg Id]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="324" y="26" width="41" height="20" uuid="a22c38cb-b629-4251-9991-3f677a331f30"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[Name]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="26" splitType="Stretch">
+			<textField>
+				<reportElement x="37" y="4" width="100" height="20" uuid="0c74cecc-7eae-4d1e-b20a-950bb2d2fdbf"/>
+				<textFieldExpression><![CDATA[$F{St Id}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="178" y="4" width="112" height="20" uuid="9e24178e-5a3e-43fb-bac4-0270ab2697c9"/>
+				<textFieldExpression><![CDATA[$F{Reg Id}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="324" y="4" width="195" height="20" uuid="6ffa62ff-260f-42a4-8482-0862ac5a436b"/>
+				<textFieldExpression><![CDATA[$F{Name}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>
